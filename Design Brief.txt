@@ -1,0 +1,20 @@
+OVERVIEW:
+
+Fonts:
+- Serif
+	- Navbar contact link (hover)
+	- Site slogan (header)
+	- Header text
+	- Body links
+- Sans-serif
+	- Navbar home
+	- Navbar links (except contact link)
+	- Body text
+	
+Layout: 
+- Header box
+	- Full screen width and height (mobile and desktop)
+- Transform and Standout Grid
+	- Six boxes
+		- Inverted order on mobile (2, 1, 2, 1, etc.)
+		- Regular
