@@ -163,7 +163,7 @@ Navbar
   visibility: hidden;
 }
 
-/* Makes the menu appear */
+/* Makes the menu appear when clicked */
 .menu-btn-checkbox:checked ~ .nav-links-box {
   opacity: 1;
   pointer-events: auto;

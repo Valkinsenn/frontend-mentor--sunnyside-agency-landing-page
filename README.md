@@ -1,94 +1,146 @@
-# Frontend Mentor - Sunnyside agency landing page
+# Frontend Mentor: Sunnyside agency landing page (my solution)
 
-![Design preview for the Sunnyside agency landing page coding challenge](./design/desktop-preview.jpg)
+This is my solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). This one was quite a bit tougher than the last challenge I did on Frontend Mentor, but well worth it for the stuff I learned along the way, like a better understanding of CSS Grid, for instance. I wanted to put a dark theme on this, but doing so (probably) would've disrupted the overall color scheme, so I decided against it.
 
-## Welcome! 👋
+I might go back and do that in the future anyway, just for kicks.
 
-Thanks for checking out this front-end coding challenge.
+## Table of contents
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this landing page and get it looking as close to the design as possible.
-
-This challenge focuses mostly on HTML & CSS. There's a tiny bit of JS included for the mobile navigation toggle. But you could also choose to do this without JS!
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+Here's some screenshots of the finished product:
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+- Desktop screenshot:
+  ![Desktop Screenshot](./screenshots/desktop-screenshot.png)
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+- Mobile screenshot:
+  ![Mobile Screenshot](./screenshots/mobile-screenshot.png)
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### Links
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+## My process
 
-## Building your project
+### Built with
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+- HTML5 (naturally)
+- SASS (for easier CSS)
+- Custom CSS
+- CSS Flexbox
+- CSS Grid
+- JavaScript (for one tiny little item)
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+### What I learned
 
-## Deploying your project
+I got a good, hearty refresher on CSS Grid as I went along, along with a refresher on how to make a responsive navbar (mostly) without JavaScript.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+And here's how I did it for mobile displays, if anyone's curious:
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+```html
+<nav class="navbar">
+  <nav class="nav-box">
+    <a class="logo-box" href="#">
+      <img src="./images/logo.svg" alt="Sunnyside Logo" class="logo" />
+    </a>
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+    <!-- Nav Toggler -->
+    <label for="menu-btn-checkbox" class="menu-btn">
+      <span class="menu-btn-burger"></span>
+    </label>
+    <!-- IMPORTANT: This needs to go IMMEDIATELY after the label!!! -->
+    <input
+      type="checkbox"
+      name="menu-btn-toggler"
+      id="menu-btn-checkbox"
+      class="menu-btn-checkbox"
+    />
 
-## Create a custom `README.md`
+    <nav class="nav-links-box">
+      <nav class="links-container">
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Services</a>
+        <a href="#" class="nav-link">Projects</a>
+        <a href="#" class="nav-link">
+          <span class="contact">Contact</span>
+        </a>
+      </nav>
+    </nav>
+  </nav>
+  <div class="navbox-bg"></div>
+</nav>
+```
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+```css
+/* Makes the navbox hidden and prevents clicks: */
+.nav-links-box {
+  opacity: 0;
+  pointer-events: none;
+}
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+/* Makes the menu appear when clicked and enables clicks: */
+.menu-btn-checkbox:checked ~ .nav-links-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+```
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+```js
+// DOM Query
+const menuBtn = document.querySelector(".menu-btn")
 
-## Submitting your solution
+// Sets the default value for the menu button's status:
+let menuOpen = false
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+// Adds a click event listener to the menu button, so that if the menuOpen variable is false, it adds the .open class to the menuBtn element, but if it's true, takes it away:
+menuBtn.addEventListener("click", () => {
+  if (!menuOpen) {
+    menuBtn.classList.add("open")
+    menuOpen = true
+  } else {
+    menuBtn.classList.remove("open")
+    menuOpen = false
+  }
+})
+```
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+### Continued development
 
-## Sharing your solution
+As this project has made abundantly clear, I REALLY need to get more comfortable with CSS Grid, along with translating layouts from previews to actual layouts on web pages. I also need to be a tad careful where I put z-indexes, too.
 
-There are multiple places you can share your solution:
+### Useful resources
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+- [CSS Tricks | A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) - An invaluable reference for anyone working with Grid, as it covers everything top to bottom, from to back about working with it.
+- [Google](https://www.google.com) - If you don't know something, odds are Google does. Or any search engine, really.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+## Author
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+- Website - I'm working on it, okay? Geez!
+- Frontend Mentor - [@valkinsenn](https://www.frontendmentor.io/profile/valkinsenn)
+- Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
-## Got feedback for us?
+## Acknowledgments
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
