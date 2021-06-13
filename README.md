@@ -39,8 +39,7 @@ Here's some screenshots of the finished product:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Here's this bad boy in action](http://127.0.0.1:5500/index.html).
 
 ## My process
 
