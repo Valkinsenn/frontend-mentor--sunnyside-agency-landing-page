@@ -138,7 +138,6 @@ As this project has made abundantly clear, I REALLY need to get more comfortable
 
 - Website - I'm working on it, okay? Geez!
 - Frontend Mentor - [@valkinsenn](https://www.frontendmentor.io/profile/valkinsenn)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
 ## Acknowledgments
 
