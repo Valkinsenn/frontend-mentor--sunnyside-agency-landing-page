@@ -1,0 +1,61 @@
+/* ==============================================================
+IMAGES
+============================================================== */
+
+@use "../abstracts/" as a;
+
+.arrow {
+  height: auto;
+  padding-top: 3rem;
+  width: 37px;
+  z-index: -1;
+}
+
+.bg-img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+/* Navbar Logo Image */
+.logo-box .logo {
+  transform: translateY(5px);
+}
+
+@media screen and (min-width: a.$small) {
+  .logo-box .logo {
+    width: 170px;
+  }
+}
+
+/* Testimonials Images */
+.photo {
+  border-radius: 50%;
+  display: block;
+  height: auto;
+  margin: auto;
+  width: 70px;
+}
+
+/* Gallery Images */
+.gallery-img {
+  height: auto;
+  margin-bottom: -3px;
+  width: 100%;
+}
+
+/* Footer Images */
+footer .logo {
+  display: block;
+  fill: a.$footer-color;
+  filter: invert(27%) sepia(51%) saturate(3000%) hue-rotate(117deg)
+    brightness(50%) contrast(55%);
+  margin: auto;
+  object-fit: contain;
+  width: 180px;
+  height: auto;
+}

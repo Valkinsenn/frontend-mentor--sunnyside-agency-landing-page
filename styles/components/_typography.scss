@@ -1,0 +1,143 @@
+/* ==============================================================
+TYPOGRAPHY
+============================================================== */
+@use "../abstracts/" as a;
+
+body {
+  font-family: a.$body-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: a.$header-font;
+  z-index: -1;
+}
+
+h1 {
+  color: a.$white;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.45rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: a.$small) {
+  h1,
+  h2,
+  h3 {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Brand Box Typography */
+.text-box p {
+  color: a.$dark-grayish-blue;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.8rem;
+  text-align: center;
+}
+
+.design-box {
+  color: a.$graphic-design-color;
+}
+
+.photo-box {
+  color: a.$photography-color;
+}
+
+.box p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.8rem;
+  padding: 1.6rem 0;
+  text-align: center;
+}
+
+@media screen and (min-width: a.$small) {
+  .text-box p {
+    text-align: left;
+  }
+
+  .box h3 {
+    text-align: center;
+  }
+}
+
+/* Testimonials Box Typography */
+.title-box h4 {
+  color: a.$grayish-blue;
+  font-weight: 900;
+  letter-spacing: 0.25rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.testimony h4 {
+  font-weight: 900;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.testimony h5 {
+  color: a.$grayish-blue;
+  font-family: a.$body-font;
+  text-align: center;
+}
+
+.testimony p {
+  color: a.$dark-grayish-blue;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.9rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+@media screen and (min-width: a.$small) {
+  .title-box h4 {
+    font-size: 1.25rem;
+  }
+
+  .testimony p {
+    padding: 4rem 0;
+  }
+}
+
+/* Attribute */
+.attribution {
+  color: a.$grayish-blue;
+  font-size: 16px;
+  text-align: center;
+}
+.attribution a {
+  color: a.$footer-color;
+  text-decoration: none;
+}

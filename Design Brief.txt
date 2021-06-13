@@ -1,20 +1,68 @@
 OVERVIEW:
 
+Colors: 
+- Primary:
+	- Soft red: hsl(7, 99%, 70%)
+	- Yellow: hsl(51, 100%, 49%)
+	- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
+	- Dark blue (photography text): hsl(198, 62%, 26%)
+	- Dark moderate cyan (footer): hsl(168, 34%, 41%)
+
+- Neutral:
+	- Very dark desaturated blue: hsl(212, 27%, 19%)
+	- Very dark grayish blue: hsl(213, 9%, 39%)
+	- Dark grayish blue: hsl(232, 10%, 55%)
+	- Grayish blue: hsl(210, 4%, 67%)
+	- White: hsl(0, 0%, 100%)
+
 Fonts:
-- Serif
-	- Navbar contact link (hover)
-	- Site slogan (header)
-	- Header text
-	- Body links
-- Sans-serif
-	- Navbar home
-	- Navbar links (except contact link)
-	- Body text
+- Body:
+	- Barlow (600) | 18px
+- Headers:
+	- Fraunces (700, 900)
 	
 Layout: 
-- Header box
+- Header box (.header)
 	- Full screen width and height (mobile and desktop)
-- Transform and Standout Grid
-	- Six boxes
-		- Inverted order on mobile (2, 1, 2, 1, etc.)
-		- Regular
+- Transform and Standout Grid (.brand-box)
+	- Four boxes, use Grid
+		- Regular order on mobile 
+		- Inverted order on desktop (2, 1, 2, 1)
+			- 2x2 grid
+			- .img-box, .text-box, .img-box, .text-box
+				- .img-box layout:
+					- img (position: absolute; top: 0; left: 0; width: 100%; height: 100%;)
+				- .text-box layout:
+					- h1 (serif)
+					- p (sans-serif)
+					- a (serif font)
+
+- Design and Photography Grid  (.aesthetics-box)
+	- Two boxes, use Grid
+		- Regular order on mobile and desktop
+			- 1x2 on mobile, 2x1 on desktop
+		- .box
+			- 100vw, 100vh
+			- Flexbox (align-items: end)
+			- Text layout (75% - 90% opacity):
+				- h1
+				- p
+
+- Testimonials Grid
+	- Use Grid
+		- .title box: always on top, desktop or mobile)
+		- .testimony-box (1x3 on mobile, 3x1 on desktop)
+			- .photo (or img)
+			- .testimony (or p)
+			- .name (h1)
+			- .position (span)
+
+- Gallery Grid
+	- Use Grid (2x2 grid on mobile, 1x4 on desktop)
+		- Set images to be 100% x 100% in size
+
+- Contact Footer
+	- Basically the same layout on mobile and desktop
+		- Sunnyside logo
+		- Site Links
+		- Social Media Links

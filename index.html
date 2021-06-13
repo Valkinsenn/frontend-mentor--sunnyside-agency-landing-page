@@ -1,68 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  About
-  Services
-  Projects
-  Contact
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <nav class="nav-box">
+        <a class="logo-box" href="#">
+          <img src="./images/logo.svg" alt="Sunnyside Logo" class="logo" />
+        </a>
 
-  We are creatives
+        <!-- Nav Toggler -->
+        <label for="menu-btn-checkbox" class="menu-btn">
+          <span class="menu-btn-burger"></span>
+        </label>
+        <input
+          type="checkbox"
+          name="menu-btn-toggler"
+          id="menu-btn-checkbox"
+          class="menu-btn-checkbox"
+        />
 
-  Transform your brand
+        <nav class="nav-links-box">
+          <nav class="links-container">
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Services</a>
+            <a href="#" class="nav-link">Projects</a>
+            <a href="#" class="nav-link">
+              <span class="contact">Contact</span>
+            </a>
+          </nav>
+        </nav>
+      </nav>
+      <div class="navbox-bg"></div>
+    </nav>
 
-  We are a full-service creative agency specializing in helping brands grow fast. 
-  Engage your clients through compelling visuals that do most of the marketing for you.
+    <!-- Beginning of Page Content -->
+    <div class="page-content">
+      <div class="splash">
+        <h1>We are creatives</h1>
+        <img
+          alt="Arrow pointing down"
+          class="arrow"
+          src="./images/icon-arrow-down.svg"
+        />
+        <picture>
+          <source
+            class="bg-img"
+            media="(max-width: 375px)"
+            srcset="./images/mobile/image-header.jpg"
+          />
+          <source srcset="./images/desktop/image-header.jpg" />
+          <img
+            alt="Orange halved against blue background"
+            class="bg-img"
+            src="./images/desktop/image-header.jpg"
+          />
+        </picture>
+      </div>
 
-  Learn more
+      <!-- Brand Box -->
+      <div class="brand-box">
+        <div class="img-box egg-box">
+          <picture>
+            <source
+              class="bg-img"
+              media="(max-width: 375px)"
+              srcset="./images/mobile/image-transform.jpg"
+            />
+            <img
+              class="bg-img"
+              src="./images/desktop/image-transform.jpg"
+              alt="White egg on yellow background"
+            />
+          </picture>
+        </div>
+        <div class="text-box transform-box">
+          <div class="inner-text">
+            <h2>Transform your brand</h2>
+            <p>
+              We are a full-service creative agency specializing in helping
+              brands grow fast. Engage your clients through compelling visuals
+              that do most of the marketing for you.
+            </p>
+            <div class="link-box">
+              <a class="learn-more-1" href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="img-box cup-box">
+          <picture>
+            <source
+              class="bg-img"
+              media="(max-width: 375px)"
+              srcset="./images/mobile/image-stand-out.jpg"
+            />
+            <img
+              class="bg-img"
+              src="./images/desktop/image-stand-out.jpg"
+              alt="White egg on yellow background"
+            />
+          </picture>
+        </div>
+        <div class="text-box standout-box">
+          <div class="inner-text">
+            <h2>Stand out to the right audience</h2>
+            <p>
+              Using a collaborative formula of designers, researchers,
+              photographers, videographers, and copywriters, we’ll build and
+              extend your brand in digital places.
+            </p>
+            <div class="link-box">
+              <a class="learn-more-2" href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="box design-box">
+          <div class="inner-text">
+            <h3>Graphic design</h3>
+            <p>
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+          <picture>
+            <source
+              class="bg-img"
+              media="(max-width: 375px)"
+              srcset="./images/mobile/image-graphic-design.jpg"
+            />
+            <img
+              class="bg-img"
+              src="./images/desktop/image-graphic-design.jpg"
+              alt="White egg on yellow background"
+            />
+          </picture>
+        </div>
+        <div class="box photo-box">
+          <div class="inner-text">
+            <h3>Photography</h3>
+            <p>
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
+          <picture>
+            <source
+              class="bg-img"
+              media="(max-width: 375px)"
+              srcset="./images/mobile/image-photography.jpg"
+            />
+            <img
+              class="bg-img"
+              src="./images/desktop/image-photography.jpg"
+              alt="White egg on yellow background"
+            />
+          </picture>
+        </div>
+      </div>
+      <!-- End of Brand Box -->
 
-  Stand out to the right audience
+      <!-- Testimonials Box -->
+      <div class="testimonials-box">
+        <div class="title-box">
+          <h4>Client testimonials</h4>
+        </div>
 
-  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
+        <div class="testimony">
+          <img class="photo" src="./images/image-emily.jpg" alt="Emily R." />
+          <p>
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
 
-  Learn more
+          <h4>Emily R.</h4>
+          <h5>Marketing Director</h5>
+        </div>
 
-  Graphic design
-  Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+        <div class="testimony">
+          <img class="photo" src="./images/image-thomas.jpg" alt="Emily R." />
+          <p>
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
 
-  Photography
-  Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+          <h4>Thomas S.</h4>
+          <h5>Chief Operating Officer</h5>
+        </div>
 
-  Client testimonials
+        <div class="testimony">
+          <img class="photo" src="./images/image-jennie.jpg" alt="Emily R." />
+          <p>
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
 
-  We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-  Emily R.
-  Marketing Director
+          <h4>Jennie F.</h4>
+          <h5>Business Owner</h5>
+        </div>
+      </div>
+      <!-- End of Testimonials Box -->
 
-  Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-  Thomas S.
-  Chief Operating Officer
+      <!-- Gallery Box -->
+      <div class="gallery-box">
+        <!-- Milk Bottles -->
+        <picture>
+          <source
+            class="gallery-img"
+            media="(max-width: 375px)"
+            srcset="./images/mobile/image-gallery-milkbottles.jpg"
+          />
+          <img
+            class="gallery-img"
+            src="./images/desktop/image-gallery-milkbottles.jpg"
+            alt="White egg on yellow background"
+          />
+        </picture>
 
-  Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-  Jennie F.
-  Business Owner
+        <!-- Orange -->
+        <picture>
+          <source
+            class="gallery-img"
+            media="(max-width: 375px)"
+            srcset="./images/mobile/image-gallery-orange.jpg"
+          />
+          <img
+            class="gallery-img"
+            src="./images/desktop/image-gallery-orange.jpg"
+            alt="White egg on yellow background"
+          />
+        </picture>
 
-  About
-  Services
-  Projects
-  Contact
+        <!-- Cone -->
+        <picture>
+          <source
+            class="gallery-img"
+            media="(max-width: 375px)"
+            srcset="./images/mobile/image-gallery-cone.jpg"
+          />
+          <img
+            class="gallery-img"
+            src="./images/desktop/image-gallery-cone.jpg"
+            alt="White egg on yellow background"
+          />
+        </picture>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <!-- Cubes -->
+        <picture>
+          <source
+            class="gallery-img"
+            media="(max-width: 375px)"
+            srcset="./images/mobile/image-gallery-sugar-cubes.jpg"
+          />
+          <img
+            class="gallery-img"
+            src="./images/desktop/image-gallery-sugarcubes.jpg"
+            alt="White egg on yellow background"
+          />
+        </picture>
+      </div>
+
+      <footer>
+        <img src="./images/logo.svg" alt="Sunnyside Logo" class="logo" />
+        <div class="links-box">
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Projects</a>
+        </div>
+        <div class="social-media-box">
+          <a class="social-media-links" href="#"
+            ><img src="./images/icon-facebook.svg" alt="Facebook"
+          /></a>
+          <a class="social-media-links" href="#"
+            ><img src="./images/icon-instagram.svg" alt="Facebook"
+          /></a>
+          <a class="social-media-links" href="#"
+            ><img src="./images/icon-twitter.svg" alt="Facebook"
+          /></a>
+          <a class="social-media-links" href="#"
+            ><img src="./images/icon-pinterest.svg" alt="Facebook"
+          /></a>
+        </div>
+      </footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >.
+        <div>Coded by <a href="#">Valkinsenn</a>.</div>
+      </div>
+    </div>
+    <!-- End of Page Content -->
+
+    <script src="./js/index.js"></script>
+  </body>
 </html>
