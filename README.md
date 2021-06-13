@@ -39,7 +39,7 @@ Here's some screenshots of the finished product:
 
 ### Links
 
-- Live Site URL: [Here's this bad boy in action](http://127.0.0.1:5500/index.html).
+- Live Site URL: [Here's this bad boy in action](https://valkinsenn.github.io/frontend-mentor--sunnyside-agency-landing-page/).
 
 ## My process
 
